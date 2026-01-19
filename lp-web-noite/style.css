@@ -1,0 +1,179 @@
+:root {
+    --01: #000814;
+    --02: #001D3D;
+    --03: #003566;
+    --04: #7a2e0e;
+    --05: #ffd60a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: fixed;
+    background-color: var(--01);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-shadow: var(--02) 0px 5px 15px;
+    animation: fromtop 2s ease-in-out;
+    z-index: 999;
+}
+
+@keyframes fromtop {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+nav a {
+    color: var(--04);
+    text-decoration: none;
+    opacity: 0.8;
+    text-decoration: underline;
+    color: var(--05);
+}
+
+nav a:hover {
+    text-decoration: underline;
+    opacity: 1;
+
+}
+
+#s1 {
+    min-height: 100vh;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+     gap: 20px;
+     flex-wrap:wrap ;
+}
+
+
+.imgDiv {
+    background-color: rgb(0, 0, 0);
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgb(119, 0, 255);
+}
+
+.imgDiv img {
+    filter: grayscale(1);
+    transition: all 200ms ease-in-out;
+}
+
+.imgDiv:hover {
+    filter: grayscale(0);
+    transform: scale(1.1) rotate(360deg);
+}
+
+.textDiv {
+    background-color: rgb(255, 255, 255);
+    width: 600px;
+    height: 300px;
+    padding: 20px;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.textDiv h2 {
+   font-size: 20px;
+}
+
+
+#s2 {
+     color: rgb(255, 255, 255);
+    min-height: 100vh;
+    background-image: url(/foto\ fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.wrapCards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+}
+.cards {
+    border: 3px solid var(--01);
+    padding: 20px;
+    background-color: #fffbfb84;
+    border-radius: 10px;
+}
+.cards:hover{
+    box-shadow: white;
+}
+.card{
+    color: var(--02);
+    text-shadow: white;
+    font-size: 20px;
+}
+hr{
+    margin-bottom: 20px;
+}
+    
+
+#s3 {
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+#s4 {
+    min-height: 100vh;
+    padding-top: 50px;
+}
+@media (width <= 1000px) {
+    #s1 {
+        height: auto;
+        min-height: 90vh;
+    
+    }
+ 
+    .textDiv {
+        background-color: rgba(255, 255, 255, 0.439);
+        width: 100%;
+    }
+ 
+    .textDiv h2 {
+        font-size: 30px;
+    }
+ 
+    .textDiv p {
+        font-size: 20px;
+    }
+ 
+}
+
+
+.imgDiv {
+    margin-top: 20px;
+    
+}
